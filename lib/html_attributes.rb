@@ -7,10 +7,9 @@ if defined?(ActionView::Helpers::TagHelper)
 
   ActionView::Helpers::TagHelper.module_eval do
     include HtmlAttributes::TagHelper
-
-    BOOLEAN_ATTRIBUTES.merge(::HtmlAttributes::BOOLEAN_ATTRIBUTES)
-    BOOLEAN_ATTRIBUTES.merge(BOOLEAN_ATTRIBUTES.map(&:to_sym))
-
   end
+
+  ActionView::Helpers::TagHelper::BOOLEAN_ATTRIBUTES.merge(::HtmlAttributes::BOOLEAN_ATTRIBUTES)
+  ActionView::Helpers::TagHelper::BOOLEAN_ATTRIBUTES.merge(ActionView::Helpers::TagHelper::BOOLEAN_ATTRIBUTES.map(&:to_sym))
 
 end
