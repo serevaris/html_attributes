@@ -12,7 +12,7 @@ module HtmlAttributes #:nodoc:
     end
 
     def tag_options_with_html_attributes(options, escape = true) #:nodoc:
-      options = ::Hash[*options.map { |key, value| [key, value.respond_to?("to_#{key}_attr") ? value.send("to_#{key}_attr") : value] }.flatten] unless options.blank?
+      options = ::Hash[options.map { |key, value| [key, value.respond_to?("to_#{key}_attr") ? value.send("to_#{key}_attr") : value] }] unless options.blank?
       tag_options_without_html_attributes(options, escape)
     end
 
