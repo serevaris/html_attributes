@@ -19,6 +19,8 @@ Gem::Specification.new do |gem|
   gem.version       = HtmlAttributes::VERSION
   gem.platform      = Gem::Platform::RUBY
 
+  gem.add_dependency             "actionview", ">= 4.0", "< 5.2"
+
   gem.add_development_dependency "rspec"
 
 end
