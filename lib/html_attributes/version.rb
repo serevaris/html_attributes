@@ -1,5 +1,5 @@
 module HtmlAttributes
-  VERSION = "0.1.1"
+  VERSION = "0.1.2"
 
   module Version
     version = VERSION.to_s.split(".").map { |i| i.to_i }
