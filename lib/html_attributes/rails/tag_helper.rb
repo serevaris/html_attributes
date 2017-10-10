@@ -8,8 +8,8 @@ module HtmlAttributes #:nodoc:
   module TagHelper #:nodoc:
 
     def self.included(base) #:nodoc:
-      base.alias_method :tag_options_without_html_attributes, :tag_options
-      base.alias_method :tag_options, :tag_options_with_html_attributes
+      base.send(:alias_method, :tag_options_without_html_attributes, :tag_options)
+      base.send(:alias_method, :tag_options, :tag_options_with_html_attributes)
     end
 
     def tag_options_with_html_attributes(options, escape = true) #:nodoc:
