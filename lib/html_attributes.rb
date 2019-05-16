@@ -5,7 +5,7 @@ if defined?(ActionView::Helpers::TagHelper)
 
   require "html_attributes/rails/tag_helper"
 
-  if Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR >= 2
+  if Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR >= 1
     ActionView::Helpers::TagHelper::TagBuilder.send(:include, HtmlAttributes::TagHelper)
   else
     ActionView::Helpers::TagHelper.module_eval do
